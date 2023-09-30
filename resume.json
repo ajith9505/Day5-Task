@@ -1,0 +1,32 @@
+{
+    "personalDetails"  : 
+    {
+        "name" : "AJITH KUMAR",
+        "mobile":"7092021105",
+        "email":"ajith.aj987@mail.com",
+        "degree":"B.E",
+        "city": "Chennai",
+        "pin code":"600100",
+        "state": "TAMILNADU",
+        "country":"INDIA"
+    },
+    "education" : [
+    {
+        "institution": "St,Joseph's college of Engineering",
+        "department": "Electrical and Electronics Engineering",
+        "studyType": "Full Time",
+        "startDate": "2014-06-01",
+        "endDate": "2017-06-01",
+        "gpa": "5.7"
+    }
+],
+    "skills": [
+        {
+          "name": "Full Stack Development')",
+          "level": "Expert",
+          "keywords": [
+            "Javascript, css, HTML, ReactJS, NodeJS, MangoDB"
+          ]
+        }
+    ]
+}

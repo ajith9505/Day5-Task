@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For/In</title>
+</head>
+<body>
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET','https://restcountries.com/v3.1/all');
+        xhr.send();
+        xhr.onload = function(){
+
+            let countryDetails = JSON.parse(xhr.responseText);
+            let country = [];
+            console.log("Flag "+"Region "+"population ");
+              for(let keys in countryDetails)
+              {
+                console.log([countryDetails[keys][["flag"]],
+                              countryDetails[keys][["region"]],
+                              countryDetails[keys][["population"]]].join("   "));
+              }   
+        }
+    </script>
+</body>
+</html>
