@@ -15,12 +15,13 @@
             let countryDetails = JSON.parse(xhr.responseText);
             let country = [];
             console.log("Flag "+"Region "+"population ");
-              for(let keys in countryDetails)
-              {
-                console.log([countryDetails[keys][["flag"]],
-                              countryDetails[keys][["region"]],
-                              countryDetails[keys][["population"]]].join("   "));
-              }   
+              
+        for(let keys in countryDetails)
+        {
+            console.log([countryDetails[keys]["flag"],countryDetails[keys]["name"]["common"],
+            countryDetails[keys]["region"],countryDetails[keys]["subregion"],
+            countryDetails[keys]["population"]].join(" "));
+        }
         }
     </script>
 </body>

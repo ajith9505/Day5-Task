@@ -14,6 +14,13 @@
 
             let countryDetails = JSON.parse(xhr.responseText);
             
+            // Itretes object in countryDetails by for/of.
+            for(let keys of countryDetails)
+        {
+            console.log([keys["flag"],keys["name"]["common"],keys["region"],
+                         keys["subregion"],keys["population"]].join(" "));
+        }
+
             //Checking two JSON Equal or Not.
             let keys1 = Object.keys(countryDetails[245]).sort();
             let keys2 = Object.keys(countryDetails[246]).sort();
@@ -23,12 +30,6 @@
              else{
                 console.log("Not Equal");
              }
-
-             // Itretes object in countryDetails by for/of.
-              for(let obj of countryDetails)
-              {
-                console.log(obj);
-              }
             }
     </script>
 </body>

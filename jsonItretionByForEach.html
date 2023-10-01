@@ -15,9 +15,10 @@
             let countryDetails = JSON.parse(xhr.responseText);
             let  countryFlag = countryDetails.map((country) => country.flag);
             
-            countryFlag.forEach(element => {
-                console.log(element);
-            });
+            countryDetails.forEach(keys => {
+            console.log([keys["flag"],keys["name"]["common"],keys["region"],
+                         keys["subregion"],keys["population"]].join(" "));
+        });
         }
 
     </script>

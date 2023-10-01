@@ -14,9 +14,15 @@
 
             let countryDetails = JSON.parse(xhr.responseText);
             
-            for(let i=0; i<countryDetails.length; i++){
-                console.log([countryDetails[i]["flag"],countryDetails[i]["name"]["official"]].join(" "));
-            }
+            for(let object=0; object<countryDetails.length; object++)
+        {
+            console.log([countryDetails[object]["flag"],countryDetails[object]["name"]["common"],
+            countryDetails[object]["region"],countryDetails[object]["subregion"],
+            countryDetails[object]["population"]].join(" "));
+            // let country = [];
+            // country.push(countryDetails[object]["flag"],countryDetails[object]["name"]["common"]);
+            // console.log(country);
+        }
             
 
         }
