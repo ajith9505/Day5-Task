@@ -14,15 +14,22 @@
 
             let countryDetails = JSON.parse(xhr.responseText);
             
-            for(let object=0; object<countryDetails.length; object++)
-        {
-            console.log([countryDetails[object]["flag"],countryDetails[object]["name"]["common"],
-            countryDetails[object]["region"],countryDetails[object]["subregion"],
-            countryDetails[object]["population"]].join(" "));
-            // let country = [];
-            // country.push(countryDetails[object]["flag"],countryDetails[object]["name"]["common"]);
-            // console.log(country);
-        }
+            if(xhr.status === 200)
+            {
+                for(let object=0; object<countryDetails.length; object++)
+            {
+                console.log([countryDetails[object]["flag"],countryDetails[object]["name"]["common"],
+                countryDetails[object]["region"],countryDetails[object]["subregion"],
+                countryDetails[object]["population"]].join(" "));
+                // let country = [];
+                // country.push(countryDetails[object]["flag"],countryDetails[object]["name"]["common"]);
+                // console.log(country);
+            }
+            }
+            else
+            {
+                console.log("Not Found");
+            }
             
 
         }

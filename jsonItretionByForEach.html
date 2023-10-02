@@ -12,13 +12,19 @@
         xhr.send();
         xhr.onload = function(){
 
-            let countryDetails = JSON.parse(xhr.responseText);
-            let  countryFlag = countryDetails.map((country) => country.flag);
+            if(xhr.status === 200)
+            {
+                let countryDetails = JSON.parse(xhr.responseText);
+                let  countryFlag = countryDetails.map((country) => country.flag);
             
-            countryDetails.forEach(keys => {
-            console.log([keys["flag"],keys["name"]["common"],keys["region"],
-                         keys["subregion"],keys["population"]].join(" "));
-        });
+                countryDetails.forEach(keys => {
+                         console.log([keys["flag"],keys["name"]["common"],keys["region"],
+                         keys["subregion"],keys["population"]].join(" "));});
+            }
+            else
+            {
+                console.log("Not Found");
+            }
         }
 
     </script>
